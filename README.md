@@ -1,43 +1,41 @@
-# Astro Starter Kit: Minimal
+# 🏗️ Studio Tecnico De Flaviis — Sito Web
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Questo progetto è il sito ufficiale dello **Studio Tecnico De Flaviis**, realizzato con [Astro](https://astro.build/) e [Tailwind CSS](https://tailwindcss.com/).  
+Il sito presenta lo studio, i servizi offerti e i contatti, con un design moderno, leggero e professionale.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Tecnologie utilizzate
 
-Inside of your Astro project, you'll see the following folders and files:
+- **[Astro](https://astro.build/)** — Framework moderno per siti statici e ibridi  
+- **[Tailwind CSS](https://tailwindcss.com/)** — Utility-first CSS framework per un design rapido e responsivo  
+- **HTML5** e **JavaScript** (dove necessario)
+- **Responsive Design** ottimizzato per desktop e mobile
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧩 Pagine principali
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Pagina | Descrizione |
+|--------|--------------|
+| `/` | Homepage con presentazione dello studio |
+| `/chi-siamo` | Informazioni sulla storia e la filosofia dello studio |
+| `/servizi` | Elenco dei servizi tecnici offerti |
+| `/contatti` | Form di contatto e mappa |
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## ⚙️ Installazione e sviluppo locale
 
-All commands are run from the root of the project, from a terminal:
+Assicurati di avere **Node.js ≥ 18** installato, poi esegui:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+# 1. Clona il repository
+git clone https://github.com/tuo-utente/studio-de-flaviis.git
+cd studio-de-flaviis
 
-## 👀 Want to learn more?
+# 2. Installa le dipendenze
+npm install
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# 3. Avvia il server di sviluppo
+npm run dev
