@@ -65,17 +65,17 @@ const navLinks = [
             </div>
         </nav>
     </div>
-
-    <script>
-        const button = document.getElementById("mobile-menu-button");
-        const menu = document.getElementById("mobile-menu");
-
-        button?.addEventListener("click", () => {
-            const isOpen = menu?.classList.contains("max-h-0");
-            menu?.classList.toggle("max-h-0", !isOpen);
-            menu?.classList.toggle("opacity-0", !isOpen);
-            menu?.classList.toggle("max-h-60", isOpen);
-            menu?.classList.toggle("opacity-100", isOpen);
-        });
-    </script>
 </header>
+
+<script>
+    const button = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+
+    button?.addEventListener("click", () => {
+        const isOpen = menu?.classList.contains("max-h-0");
+        menu?.classList.toggle("max-h-0", !isOpen);
+        menu?.classList.toggle("opacity-0", !isOpen);
+        menu?.classList.toggle("max-h-60", isOpen);
+        menu?.classList.toggle("opacity-100", isOpen);
+    });
+</script>
