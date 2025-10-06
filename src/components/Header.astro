@@ -1,23 +1,43 @@
 ---
-import logo from './../../public/images/no-sfondo.png'
+import logo from "./../../public/images/no-sfondo.png";
+const navLinks = [
+    { path: "/servizi", label: "Servizi" },
+    { path: "/progetti", label: "Progetti" },
+    { path: "/chi_siamo", label: "Chi Siamo" },
+    { path: "/contatti", label: "Contatti" },
+];
 ---
 
-<header class="stiky top-0 w-full bg-white shadow-sm z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
-        <div class="flex items-center space-x-3">
-            <a href="/">
-            <img src={logo.src} alt="Logo Studio De Flaviis" class="w-12" />
+<nav
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300"
+>
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src={logo.src} alt="Logo Studio De Flaviis" class="w-14" />
+                <div class="hidden md:block">
+                    <div class="font-bold text-xl text-gray-900">
+                        DE FLAVIIS
+                    </div>
+                    <div class="text-xs text-gray-600">Studio Tecnico</div>
+                </div>
             </a>
-            <span class="font-bold text-xl text-black"
-                >Studio Tecnico De Flaviis</span
-            >
+
+            <!-- Link desktop -->
+            <div class=" md:flex items-center space-x-8">
+                {
+                    navLinks.map((link) => (
+                        <a
+                            href={link.path}
+                            class="relative font-medium text-gray-700 hover:text-emerald-600"
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+            </div>
         </div>
-        <nav class="hidden md:flex space-x-6 text-sm font-medium">
-            <a href="#chi-siamo" class="hover:text-[var(--rosso)]">Chi siamo</a>
-            <a href="#servizi" class="hover:text-[var(--rosso)]">Servizi</a>
-            <a href="#progetti" class="hover:text-[var(--rosso)]">Esperienza</a>
-            <a href="#contatti" class="hover:text-[var(--rosso)]">Contatti</a>
-            <a href="/progetti" class="hover:text-[var(--rosso)]">Progetti</a>
-        </nav>
     </div>
-</header>
+</nav>

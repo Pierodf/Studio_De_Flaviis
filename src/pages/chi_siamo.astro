@@ -1,0 +1,163 @@
+---
+import "./../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import picture from "./../../public/images/no-sfondo.png";
+---
+
+<BaseLayout>
+    <!-- HERO -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Chi <span
+                    class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"
+                    >Siamo</span
+                >
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Un team di professionisti con 40 anni di esperienza al servizio
+                della progettazione e dell'edilizia
+            </p>
+        </div>
+
+        <!-- 40 Anni di Eccellenza -->
+        <div class="container mx-auto px-4 mb-16">
+            <div
+                class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-emerald-100 text-center"
+            >
+                <div class="flex items-center justify-center mb-8">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center"
+                    >
+                        <!-- icona placeholder -->
+                        <span class="text-white text-4xl font-bold">🏆</span>
+                    </div>
+                </div>
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">
+                    40 Anni di Eccellenza
+                </h2>
+                <p
+                    class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+                >
+                    Lo Studio Tecnico De Flaviis è un punto di riferimento nel
+                    settore edilizio e della progettazione. Con quattro decenni
+                    di esperienza, offriamo servizi completi che spaziano dalle
+                    pratiche edilizie alla progettazione architettonica, dalla
+                    termotecnica al catasto. La nostra missione è garantire
+                    professionalità, competenza e soluzioni innovative per ogni
+                    esigenza.
+                </p>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="container mx-auto px-4 mb-20">
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Il Nostro <span
+                    class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"
+                    >Team</span
+                >
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Membri del team -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg border border-emerald-100 p-8 hover:shadow-2xl transition-all"
+                >
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6"
+                    >
+                        <span class="text-white text-2xl font-bold">E</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                        Arch. Emilio De Flaviis
+                    </h3>
+                    <p class="text-emerald-600 font-semibold mb-4">
+                        Architetto
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-600 mb-2">
+                        <span class="text-emerald-500">✉️</span>
+                        <a
+                            href="mailto:emilio.deflaviis@tin.it"
+                            class="hover:text-emerald-600 transition-colors"
+                        >
+                            emilio.deflaviis@tin.it
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-600">
+                        <span class="text-emerald-500">📞</span>
+                        <a
+                            href="tel:3335960602"
+                            class="hover:text-emerald-600 transition-colors"
+                        >
+                            333 596 0602
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg border border-emerald-100 p-8 hover:shadow-2xl transition-all"
+                >
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6"
+                    >
+                        <span class="text-white text-2xl font-bold">P</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                        Ing. Piero De Flaviis
+                    </h3>
+                    <p class="text-emerald-600 font-semibold mb-4">
+                        Ingegnere Urbanista
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-600 mb-2">
+                        <span class="text-emerald-500">✉️</span>
+                        <a
+                            href="mailto:pierodeflaviis@gmail.com"
+                            class="hover:text-emerald-600 transition-colors"
+                        >
+                            pierodeflaviis@gmail.com
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-600">
+                        <span class="text-emerald-500">📞</span>
+                        <a
+                            href="tel:3335960602"
+                            class="hover:text-emerald-600 transition-colors"
+                        >
+                            333 596 0602
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg border border-emerald-100 p-8 hover:shadow-2xl transition-all"
+                >
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6"
+                    >
+                        <span class="text-white text-2xl font-bold">F</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                        Geom. Francesco De Flaviis
+                    </h3>
+                    <p class="text-emerald-600 font-semibold mb-4">
+                        Geometra Termotecnico
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-lg border border-emerald-100 p-8 hover:shadow-2xl transition-all"
+                >
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-green-500 rounded-2xl flex items-center justify-center mb-6"
+                    >
+                        <span class="text-white text-2xl font-bold">T</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Tina</h3>
+                    <p class="text-emerald-600 font-semibold mb-4">
+                        Disegnatrice
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

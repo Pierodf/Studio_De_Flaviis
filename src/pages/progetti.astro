@@ -1,56 +1,93 @@
 ---
 import "./../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import picture from "./../../public/images/no-sfondo.png"
+import picture from "./../../public/images/no-sfondo.png";
 ---
 
 <BaseLayout title="Progetti">
-    <div class="grid grid-flow-col grid-rows-4 gap-4">
-        <div>
-            <img src={picture.src} />
-        </div>
-        <div>
-            <img src={picture.src} />
-        </div>
-          <div>
-            <img src={picture.src} />
-        </div>
-        <div>
-            <img src={picture.src} />
-        </div>
-          <div>
-            <img src={picture.src} />
-        </div>
-        <!-- ... -->
-        <div>09</div>
-    </div>
+    <!-- HERO -->
+    <section class="py-20">
+      <div class="container mx-auto px-4 text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          I Nostri <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">Progetti</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          40 anni di esperienza si riflettono in ogni progetto che realizziamo. 
+          Dalla progettazione alla realizzazione, garantiamo eccellenza e professionalità.
+        </p>
+      </div>
 
-   <div class=" p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
-            <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
-                </div>
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Public repositories</dd>
-                </div>
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Open source projects</dd>
-                </div>
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">1B+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Contributors</dd>
-                </div>
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">90+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Top Forbes companies</dd>
-                </div>
-                <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Organizations</dd>
-                </div>
-            </dl>
+      <!-- Categorie Progetti -->
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100 hover:shadow-2xl transition-all">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+            <!-- icona placeholder -->
+            <span class="text-white font-bold text-xl">🏠</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Residenziale</h3>
+          <p class="text-gray-600">Progetti residenziali di alta qualità</p>
         </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100 hover:shadow-2xl transition-all">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+            <span class="text-white font-bold text-xl">💼</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Commerciale</h3>
+          <p class="text-gray-600">Soluzioni per attività commerciali</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100 hover:shadow-2xl transition-all">
+          <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+            <span class="text-white font-bold text-xl">🏢</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Pubblico</h3>
+          <p class="text-gray-600">Opere pubbliche e infrastrutture</p>
+        </div>
+      </div>
+
+      <!-- Galleria Progetti -->
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+          <img class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" alt="Progetto residenziale moderno" src="https://images.unsplash.com/photo-1604609648330-946f8bb20f61" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+            <div class="text-white">
+              <h3 class="text-2xl font-bold mb-2">Residenze Moderne</h3>
+              <p class="text-emerald-200">Progettazione e realizzazione</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+          <img class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" alt="Ristrutturazione edificio storico" src="https://images.unsplash.com/photo-1562105751-07c36e736f71" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+            <div class="text-white">
+              <h3 class="text-2xl font-bold mb-2">Ristrutturazioni</h3>
+              <p class="text-emerald-200">Recupero e valorizzazione</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+          <img class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" alt="Progetto commerciale" src="https://images.unsplash.com/photo-1587616537965-7edaff7edd43" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+            <div class="text-white">
+              <h3 class="text-2xl font-bold mb-2">Spazi Commerciali</h3>
+              <p class="text-emerald-200">Design funzionale e moderno</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+          <img class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" alt="Progetto B&B" src="https://images.unsplash.com/photo-1567111302308-8fd5b0ce3681" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+            <div class="text-white">
+              <h3 class="text-2xl font-bold mb-2">B&B e Strutture Ricettive</h3>
+              <p class="text-emerald-200">Pratiche e progettazione</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 </BaseLayout>
+

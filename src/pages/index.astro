@@ -1,238 +1,229 @@
 ---
 import "./../styles/global.css";
-import logo from "./../../public/images/no-sfondo.png";
-import Footer from './../components/Footer.astro'
-import Header from './../components/Header.astro'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import picture from "./../../public/images/no-sfondo.png";
 ---
 
-<!doctype html>
-<html lang="it">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Studio Tecnico De Flaviis</title>
-		<link rel="icon" type="image/png" href={logo.src} />
-	</head>
-
-	<body class="text-gray-800 bg-white">
-		<Header />
-
-		<!-- HERO -->
-		<section
-			class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-white to-gray-50"
-		>
-			
-			<h1 class="text-4xl md:text-6xl font-bold mb-4 text-black">
-				Progettiamo il tuo futuro con precisione e competenza
-			</h1>
-			<p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
-				Progettiamo e realizziamo soluzioni tecniche sicure, sostenibili
-				e durature.
-			</p>
-			<a
-				href="#contatti"
-				class="bg-[var(--rosso)] hover:bg-[var(--verde)] transition text-white font-semibold px-8 py-3 rounded-full shadow-md"
+<BaseLayout>
+	<section
+		class="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-white"
+	>
+		<div class="absolute inset-0 z-0">
+			<img
+				src="https://images.unsplash.com/photo-1547414785-9d16a140f12a"
+				class="w-full h-full object-cover opacity-10"
+			/>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"
 			>
-				Contattaci
-			</a>
-		</section>
+			</div>
+		</div>
 
-		<!-- CHI SIAMO -->
-		<section id="chi-siamo" class="py-20 bg-gray-50">
-			<div class="container mx-auto px-6 md:px-20">
-				<h2 class="text-3xl font-bold text-center mb-6 text-black">
-					Chi Siamo
-				</h2>
-				<p
-					class="text-center max-w-3xl mx-auto text-gray-700 leading-relaxed"
+		<div class="container mx-auto px-4 relative z-10">
+			<h1
+				class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gray-900"
+			>
+				Da 40 anni costruiamo il <span
+					class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600"
+					>futuro</span
+				>,<br />
+				progettiamo le tue <span
+					class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500"
+					>idee</span
+				>.
+			</h1>
+
+			<p
+				class="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed"
+			>
+				Passione, competenza e innovazione al servizio dei tuoi
+				progetti. Trasformiamo le tue visioni in realtà concrete e
+				durature.
+			</p>
+
+			<div class="flex flex-wrap gap-4 justify-center">
+				<a
+					href="/progetti"
+					class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
 				>
-					Lo <strong>Studio Tecnico De Flaviis</strong> è un punto di riferimento
-					nel settore dell’edilizia da oltre quarant’anni. Grazie alla
-					nostra esperienza e competenza tecnica, offriamo servizi professionali
-					di progettazione, direzione lavori, pratiche edilizie e consulenze
-					tecniche per privati e aziende. La nostra missione è garantire
-					risultati di qualità, rispettando tempi, budget e normative.
+					I Nostri Progetti →
+				</a>
+				<a
+					href="/servizi"
+					class="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-8 py-6 text-lg rounded-full"
+				>
+					Scopri i Servizi
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- SERVIZI -->
+	<section class="py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-4">
+					I Nostri <span
+						class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600"
+						>Servizi</span
+					>
+				</h2>
+				<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+					Soluzioni complete per ogni tua esigenza edilizia e
+					progettuale.
 				</p>
 			</div>
-		</section>
 
-		<!-- SERVIZI -->
-		<section id="servizi" class="py-20">
-			<div class="container mx-auto px-6 md:px-20">
-				<h2 class="text-3xl font-bold text-center mb-12 text-black">
-					I Nostri Servizi
-				</h2>
-				<div class="grid md:grid-cols-3 gap-10">
-					<div
-						class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition"
-					>
-						<h3
-							class="font-semibold text-xl mb-4 text-[var(--rosso)]"
-						>
-							Progettazione Edilizia
-						</h3>
-						<p class="text-gray-600">
-							Dalla progettazione architettonica al calcolo
-							strutturale, realizziamo soluzioni personalizzate e
-							innovative per ogni esigenza.
-						</p>
-					</div>
-					<div
-						class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition"
-					>
-						<h3
-							class="font-semibold text-xl mb-4 text-[var(--rosso)]"
-						>
-							Direzione Lavori
-						</h3>
-						<p class="text-gray-600">
-							Gestiamo e coordiniamo ogni fase del cantiere,
-							garantendo sicurezza, qualità e rispetto delle
-							normative vigenti.
-						</p>
-					</div>
-					<div
-						class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition"
-					>
-						<h3
-							class="font-semibold text-xl mb-4 text-[var(--rosso)]"
-						>
-							Consulenze Tecniche
-						</h3>
-						<p class="text-gray-600">
-							Offriamo perizie, valutazioni tecniche e assistenza
-							per pratiche edilizie, catastali e urbanistiche.
-						</p>
-					</div>
-				</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{
+					[
+						"Pratiche Edilizie",
+						"Ristrutturazioni",
+						"Edilizia Legale",
+						"Progettazione",
+						"Termotecnica",
+						"Catasto",
+					].map((service) => (
+						<div class="group relative bg-gradient-to-br from-white to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
+							<div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl font-bold">
+								✓
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">
+								{service}
+							</h3>
+							<p class="text-gray-600">
+								Servizi professionali di alta qualità per
+								risultati eccellenti.
+							</p>
+						</div>
+					))
+				}
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- PROGETTI / ESPERIENZA -->
-		<section id="progetti" class="py-20 bg-gray-50">
-			<div class="container mx-auto px-6 md:px-20">
-				<h2 class="text-3xl font-bold text-center mb-12 text-black">
-					Esperienza e Realizzazioni
+	<!-- NUMERI -->
+	<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+		<div class="container mx-auto px-4">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-4">
+					I Nostri <span
+						class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500"
+						>Numeri</span
+					>
 				</h2>
-				<div class="grid md:grid-cols-3 gap-10">
-					<div class="bg-white rounded-2xl shadow overflow-hidden">
-						<img
-							src="https://source.unsplash.com/600x400/?architecture,building"
-							alt="Progetto 1"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-6">
-							<h3
-								class="font-semibold text-lg text-[var(--verde)] mb-2"
-							>
-								Ristrutturazioni Residenziali
-							</h3>
-							<p class="text-gray-600 text-sm">
-								Interventi completi su edifici esistenti con
-								attenzione all’efficienza energetica e al
-								comfort abitativo.
-							</p>
-						</div>
-					</div>
-					<div class="bg-white rounded-2xl shadow overflow-hidden">
-						<img
-							src="https://source.unsplash.com/600x400/?construction,site"
-							alt="Progetto 2"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-6">
-							<h3
-								class="font-semibold text-lg text-[var(--verde)] mb-2"
-							>
-								Nuove Costruzioni
-							</h3>
-							<p class="text-gray-600 text-sm">
-								Dalla progettazione alla realizzazione, seguiamo
-								l’intero iter tecnico-amministrativo di nuove
-								opere.
-							</p>
-						</div>
-					</div>
-					<div class="bg-white rounded-2xl shadow overflow-hidden">
-						<img
-							src="https://source.unsplash.com/600x400/?engineering,blueprint"
-							alt="Progetto 3"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-6">
-							<h3
-								class="font-semibold text-lg text-[var(--verde)] mb-2"
-							>
-								Opere Pubbliche
-							</h3>
-							<p class="text-gray-600 text-sm">
-								Collaborazioni con enti pubblici per progetti
-								infrastrutturali, edilizia scolastica e
-								riqualificazioni urbane.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- CONTATTI -->
-		<section id="contatti" class="py-20">
-			<div class="container mx-auto px-6 md:px-20 text-center">
-				<h2 class="text-3xl font-bold mb-8 text-black">Contattaci</h2>
-				<p class="text-gray-600 mb-10">
-					Vuoi richiedere una consulenza o maggiori informazioni sui
-					nostri servizi?<br />
-					Compila il form qui sotto e ti risponderemo al più presto.
+				<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+					L'esperienza e la fiducia dei nostri clienti sono la nostra
+					più grande garanzia.
 				</p>
-				<form class="max-w-xl mx-auto text-left space-y-4">
-					<div>
-						<label class="block text-sm font-semibold mb-1"
-							>Nome</label
-						>
-						<input
-							type="text"
-							class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[var(--verde)]"
-							placeholder="Il tuo nome"
-						/>
-					</div>
-					<div>
-						<label class="block text-sm font-semibold mb-1"
-							>Email</label
-						>
-						<input
-							type="email"
-							class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[var(--verde)]"
-							placeholder="nome@email.com"
-						/>
-					</div>
-					<div>
-						<label class="block text-sm font-semibold mb-1"
-							>Messaggio</label
-						>
-						<textarea
-							rows="4"
-							class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[var(--verde)]"
-							placeholder="Scrivi il tuo messaggio..."></textarea>
-					</div>
-					<button
-						type="submit"
-						class="bg-[var(--rosso)] hover:bg-[var(--verde)] text-white font-semibold px-8 py-3 rounded-full transition w-full"
+			</div>
+
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+			>
+				<div
+					class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
+				>
+					<div
+						class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold"
 					>
-						Invia Messaggio
-					</button>
-				</form>
-				<div class="mt-12">
-					<iframe
-						src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Via%20Galileo%20Galilei%2018%20giulianova%20teramo+(Studio%20tecnico%20De%20Flaviis)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
-						width="100%"
-						height="300"
-						style="border:0;"
-						allowfullscreen=""
-						loading="lazy"></iframe>
+						☺
+					</div>
+					<div
+						class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500 mb-2"
+					>
+						1200+
+					</div>
+					<p class="text-lg text-gray-600 font-medium">
+						Clienti Soddisfatti
+					</p>
+				</div>
+				<div
+					class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
+				>
+					<div
+						class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold"
+					>
+						🏗️
+					</div>
+					<div
+						class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500 mb-2"
+					>
+						1500+
+					</div>
+					<p class="text-lg text-gray-600 font-medium">
+						Progetti Completati
+					</p>
+				</div>
+				<div
+					class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
+				>
+					<div
+						class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold"
+					>
+						🏅
+					</div>
+					<div
+						class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500 mb-2"
+					>
+						40
+					</div>
+					<p class="text-lg text-gray-600 font-medium">
+						Anni di Esperienza
+					</p>
+				</div>
+				<div
+					class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
+				>
+					<div
+						class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold"
+					>
+						👷
+					</div>
+					<div
+						class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500 mb-2"
+					>
+						4
+					</div>
+					<p class="text-lg text-gray-600 font-medium">
+						Professionisti nel Team
+					</p>
 				</div>
 			</div>
-		</section>
-		<Footer />
-	</body>
-</html>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section
+		class="py-20 bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 text-white relative overflow-hidden"
+	>
+		<div class="absolute inset-0 opacity-10">
+			<div
+				class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+			>
+			</div>
+			<div
+				class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
+			>
+			</div>
+		</div>
+
+		<div class="container mx-auto px-4 relative z-10">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-4xl md:text-5xl font-bold mb-6">
+					Pronto a Iniziare il Tuo Progetto?
+				</h2>
+				<p class="text-xl mb-8 text-emerald-50">
+					Contattaci oggi per una consulenza gratuita e scopri come
+					possiamo aiutarti.
+				</p>
+				<a
+					href="/dove-siamo"
+					class="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-3 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all inline-flex items-center gap-2"
+				>
+					Contattaci Ora →
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

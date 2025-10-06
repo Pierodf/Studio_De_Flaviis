@@ -1,0 +1,176 @@
+---
+import "./../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import picture from "./../../public/images/no-sfondo.png";
+---
+
+<BaseLayout>
+        <!-- HERO -->
+        <section class="py-20 text-center">
+            <div class="container mx-auto px-4 mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Dove <span
+                        class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"
+                        >Siamo</span
+                    >
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Vieni a trovarci nel nostro studio a Giulianova
+                </p>
+            </div>
+
+            <!-- Contatti -->
+            <div
+                class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12"
+            >
+                <!-- Box Informazioni -->
+                <div
+                    class="bg-white rounded-3xl shadow-2xl p-8 border border-emerald-100"
+                >
+                    <h2 class="text-3xl font-bold mb-8 text-gray-900">
+                        Informazioni di Contatto
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Indirizzo -->
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                📍
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-semibold text-lg text-gray-900 mb-1"
+                                >
+                                    Indirizzo
+                                </h3>
+                                <p class="text-gray-600">Via Galilei n. 18</p>
+                                <p class="text-gray-600">Giulianova (TE)</p>
+                            </div>
+                        </div>
+
+                        <!-- Telefono -->
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                📞
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-semibold text-lg text-gray-900 mb-1"
+                                >
+                                    Telefono
+                                </h3>
+                                <a
+                                    href="tel:3335960602"
+                                    class="text-emerald-600 hover:text-emerald-700 transition-colors"
+                                >
+                                    333 596 0602
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                ✉️
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-semibold text-lg text-gray-900 mb-1"
+                                >
+                                    Email
+                                </h3>
+                                <a
+                                    href="mailto:emilio.deflaviis@tin.it"
+                                    class="text-emerald-600 hover:text-emerald-700 transition-colors block"
+                                >
+                                    emilio.deflaviis@tin.it
+                                </a>
+                                <a
+                                    href="mailto:pierodeflaviis@gmail.com"
+                                    class="text-emerald-600 hover:text-emerald-700 transition-colors block"
+                                >
+                                    pierodeflaviis@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Orari -->
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-emerald-600 to-green-500 rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                ⏰
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-semibold text-lg text-gray-900 mb-1"
+                                >
+                                    Orari
+                                </h3>
+                                <p class="text-gray-600">
+                                    Lunedì - Venerdì: 9:00 - 13:00 / 15:00 -
+                                    19:00
+                                </p>
+                                <p class="text-gray-600">
+                                    Sabato: Su appuntamento
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-emerald-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            Il nostro studio è facilmente raggiungibile e
+                            dispone di parcheggio nelle vicinanze. Ti
+                            consigliamo di fissare un appuntamento per
+                            garantirti la massima attenzione.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Box Mappa -->
+                <div
+                    class="bg-white rounded-3xl shadow-2xl overflow-hidden h-full border border-emerald-100"
+                >
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=13.9550%2C42.7450%2C13.9650%2C42.7550&layer=mapnik&marker=42.7500%2C13.9600"
+                        class="w-full h-full min-h-[500px]"
+                        title="Mappa Studio Tecnico De Flaviis"></iframe>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div
+                class="mt-16 bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-white text-center"
+            >
+                <h2 class="text-4xl font-bold mb-6">
+                    Prenota una Consulenza Gratuita
+                </h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-emerald-50">
+                    Contattaci oggi stesso per discutere del tuo progetto. Il
+                    nostro team è pronto ad offrirti la migliore soluzione.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a
+                        href="tel:3335960602"
+                        class="bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition-colors shadow-lg"
+                    >
+                        Chiamaci Ora
+                    </a>
+                    <a
+                        href="mailto:emilio.deflaviis@tin.it"
+                        class="bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+                    >
+                        Invia Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+</BaseLayout>
