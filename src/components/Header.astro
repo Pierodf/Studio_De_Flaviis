@@ -1,5 +1,6 @@
 ---
 import logo from "./../../public/images/no-sfondo.png";
+import { Menu } from "@lucide/astro";
 const navLinks = [
     { path: "/servizi", label: "Servizi" },
     { path: "/progetti", label: "Progetti" },
@@ -8,11 +9,10 @@ const navLinks = [
 ];
 ---
 
-<nav
-    id="navbar"
-    class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300"
+<header
+    class="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-xs transition-all duration-300"
 >
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-5">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <a href="/" class="flex items-center space-x-3">
@@ -25,8 +25,33 @@ const navLinks = [
                 </div>
             </a>
 
+            <!-- Menu mobile button -->
+            <Menu
+                id="mobile-menu-button"
+                class="cursor-pointer text-black md:hidden"
+            />
+
             <!-- Link desktop -->
-            <div class=" md:flex items-center space-x-8">
+            <nav class="hidden md:flex items-center space-x-8">
+                {
+                    navLinks.map((link) => (
+                        <a
+                            href={link.path}
+                            class="relative font-medium text-gray-700 hover:text-emerald-600"
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+            </nav>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav
+            id="mobile-menu"
+            class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
+        >
+            <div class="flex flex-col space-y-4 py-5">
                 {
                     navLinks.map((link) => (
                         <a
@@ -38,6 +63,19 @@ const navLinks = [
                     ))
                 }
             </div>
-        </div>
+        </nav>
     </div>
-</nav>
+
+    <script>
+        const button = document.getElementById("mobile-menu-button");
+        const menu = document.getElementById("mobile-menu");
+
+        button?.addEventListener("click", () => {
+            const isOpen = menu?.classList.contains("max-h-0");
+            menu?.classList.toggle("max-h-0", !isOpen);
+            menu?.classList.toggle("opacity-0", !isOpen);
+            menu?.classList.toggle("max-h-60", isOpen);
+            menu?.classList.toggle("opacity-100", isOpen);
+        });
+    </script>
+</header>
