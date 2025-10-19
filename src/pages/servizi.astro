@@ -2,6 +2,7 @@
 import "./../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import picture from "./../../public/images/no-sfondo.png";
+import {FileText } from "@lucide/astro";
 ---
 
 <BaseLayout title="Progetti">
@@ -35,12 +36,12 @@ import picture from "./../../public/images/no-sfondo.png";
                             description:
                                 "Gestione completa di tutte le pratiche edilizie necessarie per il tuo progetto",
                             features: [
-                                "SCIA e permessi di costruire",
-                                "Condoni edilizi",
-                                "Certificazioni energetiche",
-                                "Agibilità e conformità",
+                                "CILA, SCIA e Permessi di costruire",
+                                "Accertamenti di conformità e Condoni edilizi",
+                                "Agibilità",
+
                             ],
-                            icon: "📝",
+                            icon: <FileText size="40"/>,
                         },
                         {
                             title: "Ristrutturazioni",

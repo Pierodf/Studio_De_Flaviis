@@ -1,5 +1,6 @@
 ---
-import logo from "./../../public/images/no-sfondo.png";
+import logo from "./../../public/images/logo-con-sfondo.png";
+import { Mail, Phone, MapPin } from "@lucide/astro";
 ---
 
 <footer
@@ -8,12 +9,8 @@ import logo from "./../../public/images/no-sfondo.png";
     <div class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Logo e descrizione -->
-            <div>
-                <img src={logo.src} alt="Logo Studio De Flaviis" class="w-14" />
-                <p class="text-gray-300 text-sm">
-                    40 anni di esperienza al servizio della progettazione e
-                    dell'edilizia
-                </p>
+            <div class="flex items-center justify-center">
+                <img src={logo.src} alt="Logo Studio De Flaviis" class="w-30" />
             </div>
 
             <!-- Link rapidi -->
@@ -22,22 +19,29 @@ import logo from "./../../public/images/no-sfondo.png";
                 >
                 <div class="space-y-2">
                     <a
-                        href="/progetti"
-                        class="block text-gray-300 hover:text-emerald-400 transition-colors"
-                    >
-                        Progetti
-                    </a>
-                    <a
                         href="/servizi"
                         class="block text-gray-300 hover:text-emerald-400 transition-colors"
                     >
                         Servizi
                     </a>
                     <a
+                        href="/progetti"
+                        class="block text-gray-300 hover:text-emerald-400 transition-colors"
+                    >
+                        Progetti
+                    </a>
+
+                    <a
                         href="/chi_siamo"
                         class="block text-gray-300 hover:text-emerald-400 transition-colors"
                     >
                         Chi Siamo
+                    </a>
+                    <a
+                        href="/contatti"
+                        class="block text-gray-300 hover:text-emerald-400 transition-colors"
+                    >
+                        Contatti
                     </a>
                 </div>
             </div>
@@ -47,17 +51,17 @@ import logo from "./../../public/images/no-sfondo.png";
                 <span class="font-semibold text-lg mb-4 block">Contatti</span>
                 <div class="space-y-3">
                     <div class="flex items-center space-x-2 text-gray-300">
-                        <span class="text-emerald-400">📍</span>
+                        <span class="text-emerald-400"><MapPin /></span>
                         <span class="text-sm"
                             >Via Galilei n. 18, Giulianova</span
                         >
                     </div>
                     <div class="flex items-center space-x-2 text-gray-300">
-                        <span class="text-emerald-400">📞</span>
+                        <span class="text-emerald-400"><Phone /></span>
                         <span class="text-sm">333 596 0602</span>
                     </div>
                     <div class="flex items-center space-x-2 text-gray-300">
-                        <span class="text-emerald-400">✉️</span>
+                        <span class="text-emerald-400"><Mail /></span>
                         <span class="text-sm">emilio.deflaviis@tin.it</span>
                     </div>
                 </div>
